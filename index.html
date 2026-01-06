@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index,follow" />
+  <meta name="description" content="BloxValues.net provides trusted Blox Fruits values, demand insights, and trading tools for smarter, faster, and safer trades." />
+  <title>BloxValues Trusted Blox Fruits Values for Smart Trades</title>
+
+  <style>
+    :root{
+      --nav:#0B2345;
+      --nav2:#071A33;
+      --bg:#EEF3F9;
+      --white:#FFFFFF;
+      --text:#0C1F3A;
+      --muted:#2D3E55;
+      --line:#D9E3F0;
+      --accent:#F97316;
+      --shadow:0 18px 45px rgba(16,24,40,.10);
+      --radius:24px;
+      --max:1180px;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: var(--bg);
+      color: var(--muted);
+      line-height: 1.75;
+    }
+    a{text-decoration:none;color:inherit;}
+
+    /* NAVBAR */
+    .navbar{
+      width:100%;
+      background: linear-gradient(90deg, var(--nav2), var(--nav));
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 10px 25px rgba(0,0,0,.18);
+    }
+    .nav-wrap{
+      max-width: var(--max);
+      margin:auto;
+      padding:0 16px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+    }
+    .logo{
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: .3px;
+      color: #fff;
+    }
+    .nav-links{
+      display:flex;
+      gap: 26px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .nav-links a{
+      color: rgba(255,255,255,.88);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 6px 0;
+      position:relative;
+      transition:.2s ease;
+    }
+    .nav-links a:hover{color:#fff;}
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:0%;
+      height:3px;
+      border-radius:999px;
+      background: var(--accent);
+      transition:.25s ease;
+    }
+    .nav-links a:hover::after{width:100%;}
+
+    /* PAGE */
+    .page{
+      width:100%;
+      padding: 34px 0 80px;
+    }
+    .wrap{
+      max-width: var(--max);
+      margin:auto;
+      padding:0 16px;
+    }
+
+    /* HERO CARD */
+    .hero-card{
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 46px 44px;
+      margin-top: 24px;
+    }
+
+    /* SECTION CARDS */
+    .card{
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 40px 44px;
+      margin-top: 24px;
+    }
+
+    h1{
+      font-size: clamp(30px, 3.8vw, 48px);
+      line-height: 1.15;
+      color: var(--text);
+      letter-spacing:-.6px;
+      margin-bottom: 18px;
+      font-weight: 900;
+    }
+    h2{
+      font-size: clamp(24px, 2.5vw, 36px);
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 10px;
+      font-weight: 900;
+      letter-spacing:-.4px;
+    }
+    p{
+      font-size: 17px;
+      color: var(--muted);
+      margin-top: 16px;
+    }
+
+    /* ORANGE HIGHLIGHT */
+    .highlight{
+      color: var(--accent);
+      font-weight: 900;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 5px;
+    }
+
+    /* CTA */
+    .cta{
+      margin-top: 22px;
+      border-radius: 18px;
+      background: rgba(249,115,22,.08);
+      border: 1px solid rgba(249,115,22,.25);
+      padding: 18px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .cta strong{color: var(--text);}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      background: var(--accent);
+      color:#fff;
+      font-weight: 900;
+      transition:.2s ease;
+    }
+    .btn:hover{transform: translateY(-2px);}
+
+    /* TABLE */
+    table{
+      width:100%;
+      border-collapse: collapse;
+      margin-top: 22px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow:hidden;
+      background:#fff;
+    }
+    th,td{
+      padding: 14px 14px;
+      text-align:left;
+      border-bottom:1px solid var(--line);
+      font-size: 15px;
+    }
+    th{
+      background: #F5F8FF;
+      color: var(--text);
+      font-weight: 900;
+    }
+    td{color: var(--muted);}
+    tr:hover td{background:#FBFDFF;}
+
+    /* LIST */
+    ul{
+      margin-top: 18px;
+      padding-left: 20px;
+      display:grid;
+      gap: 10px;
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    /* INLINE LINKS STYLE */
+    .inline-link{
+      color: var(--accent);
+      font-weight: 900;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+      transition:.2s ease;
+    }
+    .inline-link:hover{
+      opacity:.85;
+    }
+
+    /* MOBILE */
+    @media(max-width: 680px){
+      .hero-card,.card{padding: 28px 18px; border-radius: 18px;}
+      .logo{font-size: 20px;}
+      .nav-links{gap: 14px;}
+      p{font-size: 16px;}
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-wrap">
+      <div class="logo">BloxValues.net Guide</div>
+      <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#tools">Tools</a>
+        <a href="#demand">Demand vs Value</a>
+        <a href="#categories">Categories</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE -->
+  <div class="page">
+    <div class="wrap">
+
+      <!-- HERO / INTRO -->
+      <section id="overview" class="hero-card">
+        <h1>BloxValues Trusted Blox Fruits Values for Smart Trades</h1>
+
+        <p>
+          Trading in Blox Fruits is one of the most important parts of the game, especially for players who want to build a powerful inventory without wasting time or losing high-value fruits.
+          But as the trading market grows, one problem becomes more common: value confusion. Many players still rely on guesses, outdated value lists, or random trade advice in chat, which often leads to unfair trades, losses, and scams.
+          That’s why BloxValues.net has become a valuable platform for the community—it helps traders understand real value trends, compare offers quickly, and make fair decisions with confidence.
+        </p>
+
+        <p>
+          BloxValues.net is a tool-based website created specifically for Roblox Blox Fruits players who want accurate value information in a simple, easy-to-use format.
+          It focuses on what matters most: letting you check values instantly, analyze trade outcomes, and stay updated with current market demand.
+          Whether you trade occasionally or trade daily, the platform makes the process clearer and far more reliable.
+        </p>
+
+        <div class="cta">
+          <div>
+            <strong>Want instant value checks & smarter trades?</strong>
+            <p style="margin-top:8px;">Use trusted value tools before confirming any serious deal.</p>
+          </div>
+
+          <!-- ✅ LINK 1 (your exact requirement) -->
+          <a class="btn" href="https://bloxvalues.net/" target="_blank" rel="noopener">
+            Visit <strong>http://bloxvalues.net/</strong> →
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 2 -->
+      <section class="card">
+        <h2>What Makes BloxValues.net Different From Other Value Sites</h2>
+
+        <p>
+          Many sites provide Blox Fruits values, but not all of them are designed with traders in mind. Some platforms are cluttered, slow, or filled with unnecessary content.
+          Others don’t update consistently, which makes their values unreliable. BloxValues.net stands out because it is built around tools and trading intent.
+          Its goal is not only to show values but to help players use those values correctly during real trades.
+        </p>
+
+        <p>
+          A major advantage is clarity. Values are presented in a way that makes comparison easy, which is exactly what traders need during negotiations.
+          Beginners can learn the basics and avoid early mistakes, while advanced traders gain speed through fast calculations.
+          In a market where timing matters, speed and accuracy become essential—and that is where BloxValues.net wins.
+        </p>
+      </section>
+
+      <!-- SECTION 3 -->
+      <section class="card">
+        <h2>Why Blox Fruits Values Change and Why You Need a Reliable Platform</h2>
+
+        <p>
+          Blox Fruits values are not fixed. They shift based on demand, popularity, update changes, and trading behavior across the community.
+          A fruit can rise quickly if it becomes stronger after an update, or drop if demand falls and fewer players want it.
+          That makes it risky to rely on outdated lists or random suggestions.
+        </p>
+
+        <p>
+          To explore a clean and lightweight value reference experience, many players also check a quick mirror-style resource like
+          <a class="inline-link" href="https://bloxvalues-d49374.gitlab.io/" target="_blank" rel="noopener">
+            BloxValues value insights page
+          </a>
+          during fast trade sessions—especially when they want instant clarity before accepting an offer.
+        </p>
+
+        <p>
+          Using a trusted platform improves your trading accuracy and reduces emotional decisions under pressure. This becomes critical in high-tier trades
+          where one mistake can cost weeks of progress.
+        </p>
+      </section>
+
+      <!-- SECTION 4 -->
+      <section id="tools" class="card">
+        <h2>BloxValues.net Tools: Built for Fast Trading Decisions</h2>
+
+        <p>
+          BloxValues.net is popular because it offers tools that match real trading behavior. The platform is designed to help users check values quickly,
+          compare offers, and understand whether a trade is fair. Instead of relying on a single list, it supports decision-making with structured comparisons.
+        </p>
+
+        <p>
+          The value calculator, value list, and category breakdowns help traders avoid overpaying for hype-based fruits and focus on items with real demand strength.
+          This makes the entire trading experience smoother, safer, and more consistent—especially for daily traders.
+        </p>
+      </section>
+
+      <!-- SECTION 5 -->
+      <section id="demand" class="card">
+        <h2>Understanding Value and Demand Using BloxValues.net</h2>
+
+        <p>
+          Value and demand are not the same. Value is the estimated worth of a fruit, while demand shows how quickly and easily it trades.
+          Some fruits are high value but slow to trade, while others may be slightly lower in value but extremely easy to trade.
+          BloxValues.net helps players understand both sides of this equation.
+        </p>
+
+        <p>
+          When you trade with demand awareness, you avoid holding fruits that sit in your inventory for weeks with no good offers.
+          Instead, you focus on fruits that move quickly and create better trading opportunities.
+        </p>
+      </section>
+
+      <!-- SECTION 6 (TABLE) -->
+      <section id="categories" class="card">
+        <h2>BloxValues.net Value Categories: How the Platform Helps You Trade Smarter</h2>
+
+        <p>
+          A professional trading platform doesn’t only show numbers—it helps traders understand what those numbers mean.
+          BloxValues.net supports smarter trading by structuring values into clear groups that are easy to apply during negotiations.
+        </p>
+
+        <table aria-label="BloxValues categories table">
+          <thead>
+            <tr>
+              <th>Value Group</th>
+              <th>What It Means for Traders</th>
+              <th>Best Use Case</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>High Demand Values</strong></td>
+              <td>Trades quickly and holds strong offers</td>
+              <td>Profitable daily trading</td>
+            </tr>
+            <tr>
+              <td><strong>Stable Values</strong></td>
+              <td>Consistent value with low risk</td>
+              <td>Safe long-term holding</td>
+            </tr>
+            <tr>
+              <td><strong>Low Demand Values</strong></td>
+              <td>Harder to trade, fewer offers</td>
+              <td>Avoid unless needed</td>
+            </tr>
+            <tr>
+              <td><strong>Premium Tier Values</strong></td>
+              <td>Top trading level items</td>
+              <td>Advanced trading strategy</td>
+            </tr>
+            <tr>
+              <td><strong>Entry Tier Values</strong></td>
+              <td>Good for beginner trades</td>
+              <td>Early inventory building</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- SECTION 7 (ONLY ONE LIST) -->
+      <section class="card">
+        <h2>How to Use BloxValues.net for Better Trades</h2>
+
+        <p>
+          To get real benefit from BloxValues.net, use it consistently in your trading routine. These are the best ways
+          to use the platform for stronger and safer trades:
+        </p>
+
+        <ul>
+          <li>Check values before accepting any serious trade offer</li>
+          <li>Use the calculator when multiple fruits are involved</li>
+          <li>Focus on demand-based trading, not just rarity</li>
+          <li>Avoid panic trading during hype moments</li>
+          <li>Re-check values after updates because markets shift fast</li>
+          <li>Use value insight during negotiations to strengthen your position</li>
+          <li>Keep track of stable-value fruits to protect your inventory</li>
+        </ul>
+      </section>
+
+      <!-- SECTION 8 -->
+      <section class="card">
+        <h2>Why BloxValues.net Supports Better Trading Culture</h2>
+
+        <p>
+          Blox Fruits trading can be chaotic because not every player understands values. That creates confusion and leads to unfair deals.
+          A platform like BloxValues.net improves the community by helping players trade with awareness and confidence.
+          When more people trade with value clarity, scams reduce, negotiations improve, and the market becomes more balanced.
+        </p>
+
+        <p>
+          For beginners, tools prevent early losses. For experienced players, they save time and boost efficiency.
+          That balance is why value platforms continue to grow in gaming communities—they solve a real problem.
+        </p>
+      </section>
+
+      <!-- SECTION 9 -->
+      <section class="card">
+        <h2>Conclusion</h2>
+
+        <p>
+          BloxValues.net is a trusted tool-based platform built to help Blox Fruits players trade smarter. By providing accurate value references,
+          clear comparisons, and trade-focused tools, it removes confusion and makes trading more fair and efficient.
+        </p>
+
+        <p>
+          If you want to avoid unfair deals, build a stronger inventory, and make confident trades based on real market demand, BloxValues.net provides
+          the structure you need. Trading becomes faster, safer, and more profitable when you stop guessing and start using accurate value insight.
+        </p>
+      </section>
+
+    </div>
+  </div>
+
+</body>
+</html>
